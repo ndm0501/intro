@@ -4,12 +4,12 @@ import * as ACTIONS from "../actions/actions";
 import Auth from "../utils/auth";
 import { connect } from "react-redux";
 
-
 class Container1 extends React.Component {
   render() {
     return (
       <div>
         <button onClick={() => this.props.auth.login()}>Login</button>
+        <button onClick={() => this.props.auth.logout()}>Logout</button>
         <button onClick={() => this.props.action1()}>Dispatch Action 1</button>
         <button onClick={() => this.props.action2()}>Dispatch Action 2</button>
       </div>
@@ -18,7 +18,7 @@ class Container1 extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    stateprop1: state.stateprop1
+    stateprop1: state.userReducer.stateprop1
   };
 };
 const mapDispatchToProps = dispatch => {

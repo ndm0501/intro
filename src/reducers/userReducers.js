@@ -4,7 +4,7 @@ const initState = {
   stateprop1: false
 };
 
-const rootReducer = (state = initState, action) => {
+const userReducer = (state = initState, action) => {
   switch (action.type) {
     case ACTION_TYPES.SUCCESS:
       return { ...state, stateprop1: true };
@@ -18,4 +18,4 @@ const rootReducer = (state = initState, action) => {
   }
 };
 
-export default rootReducer;
+export default userReducer;
